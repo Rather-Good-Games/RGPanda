@@ -195,20 +195,18 @@ namespace RatherGood.Panda
                         type = AimPositionType.Position,
                         position = TargetEntity.OpponentAimTransform.position,
                     });
-                    ThisTask.Succeed();
+    
                 }
                 else
                 {
                     // Attack when no queue skill
                     bool isLeftHand = false;
                     attackInProcess = Entity.Attack(ref isLeftHand);
-                    ThisTask.Succeed();
+
                 }
 
-            }
-            else
-            {
-                ClearAttackStates(); //clear after action/animation complete
+                ThisTask.Succeed();
+
             }
 
         }

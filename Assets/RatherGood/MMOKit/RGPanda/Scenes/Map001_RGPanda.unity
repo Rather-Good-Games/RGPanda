@@ -2598,6 +2598,11 @@ PrefabInstance:
       propertyPath: waypointPathGO
       value: 
       objectReference: {fileID: 834405775}
+    - target: {fileID: 7489984135145197577, guid: 9ad60f84b45f21145b1fc732c2702dea,
+        type: 3}
+      propertyPath: sourceInfos.Array.data[0].isFoldout
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ad60f84b45f21145b1fc732c2702dea, type: 3}
 --- !u!1001 &3020054388346399556
