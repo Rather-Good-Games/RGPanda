@@ -1,0 +1,13 @@
+//Combat-for humans with typical invenory/weapons
+tree("Combat")
+	sequence
+		Combat_TryGetTargetEntity //first do we have a target
+		Combat_GetRandomSkillOrAttack //choose weapon or skill
+		WaitRealTimeRG(0.25)
+		SheathWeapons(false)
+		Movement_SetLookRotationToLookTarget
+		Combat_MoveOnTargetUntilInRange(MultiplayerARPG.ExtraMovementState.IsSprinting)
+		Movement_SetLookRotationToLookTarget
+		Combat_Attack
+
+

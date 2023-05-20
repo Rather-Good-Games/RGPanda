@@ -1,0 +1,10 @@
+
+tree("Patrol")
+	sequence
+		SheathWeapons(true)
+		Movement_SetNextWaypointIndex
+		Movement_MoveToDestination(MultiplayerARPG.ExtraMovementState.IsWalking)
+		SheathWeapons(false)
+		WaitRealTimeRG(3.0)
+
+

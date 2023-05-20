@@ -1,0 +1,58 @@
+tree("Root")
+	//Setup once
+	while
+		IsServer
+		mute //always run, ignore
+			fallback //select mode in priority order
+				while
+					AiModeCompare(RatherGood.Panda.AIModeEnum.none)
+					mute tree("None")
+				while
+					AiModeCompare(RatherGood.Panda.AIModeEnum.fleeing)
+					mute tree("Fleeing")
+				while
+					AiModeCompare(RatherGood.Panda.AIModeEnum.combat)
+					mute tree("Combat")
+				while
+					AiModeCompare(RatherGood.Panda.AIModeEnum.alert)
+					mute tree("Alert")
+				while
+					AiModeCompare(RatherGood.Panda.AIModeEnum.patrol)
+					mute tree("Patrol")
+				while
+					AiModeCompare(RatherGood.Panda.AIModeEnum.idle)
+					mute tree("Idle")
+				while
+					AiModeCompare(RatherGood.Panda.AIModeEnum.followSummoner)
+					mute tree("FollowSummoner")
+
+//Placeholders
+
+tree("None")
+	sequence
+		Movement_StopMove
+		Succeed //stop here, do nothing
+
+tree("Fleeing")
+	sequence
+		Combalt_FleeFromTarget(5.0, 5.0)
+		WaitRealTimeRG(3.0)
+		//Movement_SetLookRotationToLookTarget
+		SheathWeapons(true)
+
+tree("Alert")
+	sequence
+		Movement_StopMove
+		Succeed
+
+tree("Idle")
+	sequence
+		Movement_StopMove
+		SheathWeapons(true)
+		Succeed
+
+tree("FollowSummoner")
+	sequence
+		SheathWeapons(true)
+		Movement_FolowSummoner
+
