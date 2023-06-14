@@ -55,6 +55,7 @@ namespace RatherGood.Panda
             Entity.onNotifyEnemySpottedByAlly += Entity_onNotifyEnemySpottedByAlly;
             Entity.onReceivedDamage += Entity_onReceivedDamage;
 
+            this.InvokeInstanceDevExtMethods("Awake");
         }
 
         public override void EntityOnDestroy()
@@ -63,6 +64,8 @@ namespace RatherGood.Panda
             Entity.onNotifyEnemySpotted -= Entity_onNotifyEnemySpotted;
             Entity.onNotifyEnemySpottedByAlly -= Entity_onNotifyEnemySpottedByAlly;
             Entity.onReceivedDamage -= Entity_onReceivedDamage;
+
+            this.InvokeInstanceDevExtMethods("OnDestroy");
         }
 
 
