@@ -82,9 +82,8 @@ namespace RatherGood.Panda
 
         public override void EntityUpdate()
         {
-            base.EntityUpdate();
 
-            //only update from server and if palyers are nearby?
+            //only update from server and if players are nearby?
             if (!Entity.IsServer || Entity.Identity.CountSubscribers() == 0)
                 return;
 

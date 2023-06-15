@@ -224,8 +224,6 @@ namespace RatherGood.Panda
                     Entity.MovementState.HasFlag(MovementState.IsJump));
         }
 
-        [Header("Find poaition")]
-
         [SerializeField] int maxFindPositionTries = 10;
 
         [SerializeField] float randomVariationAroundPosition = 2f;

@@ -11,6 +11,9 @@ namespace RatherGood.Panda
     {
         [Category(3, "Equipment", true)]
 
+        [Space]
+        [Header("Section: Equipment")]
+
         [SerializeField] bool equipPlaceholder;
 
         [Task] bool IsWeaponsSheathed => Entity.IsWeaponsSheathed;
